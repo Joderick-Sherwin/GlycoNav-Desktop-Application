@@ -1,0 +1,567 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Diabetes Predictor</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="icon" type="image/x-icon" href="images/project-logo.ico">
+	<link rel="stylesheet" href="styles\About.css">
+	<style>
+	
+	html {
+	margin-top: -8px;
+    margin-left: -8px;
+    margin-right: -8px;
+	}
+body {
+	background: white;
+	color: black;
+	overflow-x:hidden;
+	margin: 0;
+	line-height:1;
+	}
+		/* width */
+		::-webkit-scrollbar 
+			{
+			width: 10px;
+			}
+
+		/* Track */
+		::-webkit-scrollbar-track 
+			{
+			box-shadow: inset 0 0 5px white; 
+			border-radius: 10px;
+			}
+ 
+		/* Handle */
+		::-webkit-scrollbar-thumb 
+			{
+			background: linear-gradient(180deg, #0043ffe0, #000000cf);
+			border-radius: 10px;
+			}
+		body {margin:0;font-family:Arial;}
+
+		
+
+body {
+	margin: 0;
+	line-height:1;
+	}
+		.topnav {
+			overflow: hidden;
+			width: 25%;
+			height: fit-content;
+			}
+
+		.topnav a.lims_nav_item {
+			display: block;
+			color: white;
+			text-align: center;
+			padding: 20px;
+			text-decoration: none;
+			font-size: 17px;
+			}
+
+		.topnav a.lims_nav_active {
+			color: white;
+			padding:20px;
+			font-size: 17px;
+			border-bottom:2px solid white;
+			}
+
+
+		.topnav .icon {
+			display: none;
+			}
+
+		
+
+.welcome {
+	padding-top: 80px; 
+	text-align: center;
+	width: 100%
+	}
+.img {
+	width: 245px;
+    height: 65px;
+    margin-top: -5px;
+	padding-left: 10px;
+	}
+.contact {
+	height:100%;
+	}
+.phone {
+	height: 100%;
+	}
+.logo {
+	width: 100%;
+	padding-top: 15px;
+	height: 100%;
+	}
+.logo p {
+	color: white;
+    width: 60px;
+    margin: 0;
+    margin-right: 0;
+    float: right;
+    margin-top: 10px;
+    font-size: 46px;
+	}
+a:link{
+	color: white;
+	text-decoration: none;
+	padding: 20px;
+	}
+a:visited{
+	color: white;
+	text-decoration: none;
+	padding: 20px;
+	}
+nav {
+	display: flex;
+	position: relative;
+    background: #00418d;
+	padding-left: 0.6%;
+	padding-top: 20px;
+	position:fixed;
+	margin:0;
+	width: 100%;
+	}
+nav ul {
+	overflow: hidden;
+	padding-right:31px;
+	}
+
+.icon {     display: block;
+    float: right;
+    padding: px;
+    border-radius: 5px;
+    color: #fff;
+    border: 1.5px solid #fff;
+    margin-right: 19px;}
+	.lims_nav_mob:hover { background:rgba(255,255,255,0.2); }
+	.lims_nav_mob_close { z-index:4; position:absolute; top:10px; right:10px; font-size:20px; padding:10px; background:var(--primary-color); color:#fff; line-height:12px; border-radius:5px; }	
+	.lims_nav_mob, .lims_nav_mob_close { display:none; }
+.topnav a {
+	float: right;
+	padding: 20px;
+	}
+	
+.lims_nav_item {    display: inline-block;
+    vertical-align: top;
+    margin:0 6px; padding:5px 3px; 
+    color: #fff;
+    border-bottom: 2px solid transparent;
+    position: relative;}
+.lims_nav_item:hover, .lims_nav_active { border-color:#fff;border-bottom-width: 2px; }
+
+.lims_nav_name { font-size: 40px;}
+
+.topnav.lims_nav_active {display:inline-block; vertical-align:top; margin:0 10px; padding:5px; color:#fff; border-bottom:2px solid transparent; position:relative; padding-bottom: 7px;
+    padding-left: 0px;
+    padding-right: 0px;}
+	
+.boxdiv .vl {
+			width: 45%;
+			}
+		.boxdiv {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 50px;
+}
+button {
+	margin: 10px;
+}
+
+.vr {
+    background: #00418d;
+	color: white;
+    border-radius: 19px;
+    width: 45%;
+    float: left;
+    padding: 50px;
+height: fit-content;
+}
+.vr:hover {
+	filter: grayscale(0%);
+}
+
+.variables {
+	height: 1000px;
+}
+
+.advantage {
+	height: 50%;
+}
+
+
+h1 {
+	font-size:xx-large;
+	text-align: center;
+	animation-name: bodyani3;
+    animation-duration: 4s;
+}
+@keyframes bodyani3 {
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+        }
+}
+.steps{
+	animation-name: bodyani1;
+    animation-duration: 2s;
+}
+@keyframes bodyani1 {
+    0%{
+        opacity: 0;
+        transform:translateX(200px);
+    }
+    100%{
+        opacity: 1;
+        transform:translateX(0px);
+        }
+}
+.note{
+	animation-name: bodyani2;
+    animation-duration: 2s;
+    font-size: medium;
+	font-weight: lighter;
+}
+@keyframes bodyani2 {
+    0%{
+        opacity: 0;
+        transform:translateX(-200px);
+        }
+    100%{
+        opacity: 1;
+        transform:translateX(0px);
+    }
+}
+section {
+	margin-top: 10%;
+}
+
+@media screen and (max-width: 385px) {
+	.lims_nav_name {
+		font-size: 34px;
+	}
+}
+@media screen and (max-width: 1500px) {
+	
+	.main-content{
+		width: 92%;
+	}
+	.boxdiv{
+		width: 100%;
+	}
+.boxdiv{
+		display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;
+		align-items: center;
+	}
+.advimg{
+	width: 33%;
+}
+
+}
+
+@media screen and (max-width: 100px) {
+	
+
+	 .vl {
+    flex: 100%;
+    width: 100%;
+  }
+  .vr {
+  flex: 100%;
+  max-width: 100%;
+  }
+}
+
+@media screen and (max-width: 1214px) {
+
+}
+
+@media screen and (max-width: 1024px) {
+	
+	.Advantage{
+		display: flex;
+		width: 100%;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+	height: 50%;
+	}
+	.vl {
+		display: none;
+	}.variables {
+	display: contents;
+}
+.vr{
+	color: white;
+    border-radius: 19px;
+    width: 45%;
+    float: left;
+    padding: 50px;
+    height: fit-content;
+}
+}
+@media screen and (max-width: 1024px) {
+
+.advimg{
+	width: 43%;
+}.vl{ display: none;}
+}
+@media screen and (max-width: 600px) {
+	.advimg { width: 70%;}
+	.boxdiv{
+		display: flex;
+		flex-direction: column;
+		flex-wrap: wrap;
+		align-items: center;
+	}
+}@media screen and (max-width: 500px) {
+
+}
+@media screen and (max-width: 1100px) {
+	
+}
+
+
+@media screen and (max-width: 700px) {
+	.Advantage{padding: 50px;}
+}
+@media screen and (min-width: 1025px) {
+	.Advantage {width: 100%;}
+	}
+	
+@media screen and (min-width: 1001px) and (max-width: 1500px) {
+	.vr{color: white;
+    border-radius: 19px;
+    width: 45%;
+    float: left;
+    padding: 50px;
+height: fit-content;
+	}
+	.boxdiv {
+		display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+	}
+}
+@media screen and (min-width: 701px) and (max-width: 1200px) {
+.Advantage{padding: 50px;}
+.vr{color: white;
+    border-radius: 19px;
+    width: 45%;
+    float: left;
+    padding: 50px;
+height: fit-content;}
+}
+	
+@media screen and (max-width: 3000px) and (min-width: 1440px) {
+	
+.advimg{
+	width: 33%;
+}
+	}
+.button1{
+		background-color:lightblue;
+		border: none;
+		color:lightblue;
+		text-align: center;
+		text-decoration: none;
+		display: inline-block;
+		font-size: 20px;
+}
+.button2{
+	background-color:lightblue;
+	border: none;
+	color:lightblue;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	font-size: 20px;
+}  
+.container{
+	scroll-snap-type: y mandatory;
+	overflow-y:scroll;
+	height:100vh;
+	}
+	.about1{
+		padding: 0px 0;
+		color:black;
+		font-family:"Source Sans Pro", Helvetica, Arial, sans-serif;
+		font-size:35px;
+		text-align: center;
+		}
+		.about2{
+		padding: 70px 0;
+		color:black;
+		font-family:Source Sans Pro, Helvetica, Arial, sans-serif;
+		font-size:35px;
+		}
+.topnav .icon {
+  display: none;
+}
+
+.dropdown {
+  float: left;
+  overflow: hidden;
+}
+
+.dropdown .dropbtn {
+  font-size: 17px;    
+  border: none;
+  outline: none;
+  color: white;
+  padding: 14px 16px;
+  background-color: inherit;
+  font-family: inherit;
+  margin: 0;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  float: none;
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.topnav a:hover, .dropdown:hover .dropbtn {
+  color: white;
+}
+.dropdown:hover {
+  display: block;
+}
+
+
+.boxdiv.vr {
+	color: white;
+    border-radius: 19px;
+    background: blue;
+    width: 45%;
+    float: left;
+    padding: 50px;
+
+}
+@media screen and (max-width: 1000px) {
+	nav {
+	width: 100%;
+	}
+	.boxdiv{
+		display: flex;
+		flex-direction: column;
+		flex-wrap: wrap;
+		align-items: center;
+    }
+  .topnav a:not(:nth-child(0)), .dropdown .dropbtn {
+    display: none;
+  }
+  .topnav a.icon {
+    float: right;
+    display: block;
+	color: white;
+  }
+  
+  .topnav a.icon:hover {
+      background: rgba(255,255,255,0.2);
+	  }
+}
+
+@media screen and (max-width: 1000px) {
+	.lims_nav_mob { display:block; float:right; font-size:20px; line-height:20px; padding:5px; border-radius:5px; color:#fff; border:1px solid #fff; margin-top:10px; width:32px; height:32px; }
+	.lims_nav_mob_close { z-index:4; position:absolute; top:10px; right:10px; font-size:20px; padding:10px; background:var(--primary-color); color:#fff; line-height:12px; border-radius:5px; }	
+	.lims_nav_mob:hover { background:rgba(255,255,255,0.2); }
+  .topnav.responsive {position: relative; display: flex; flex-direction: column-reverse;}
+  .topnav.responsive .icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  .topnav.responsive a.lims_nav_item {
+        float: none;
+    display: block;
+    text-align: left;
+	background:blue;
+	color: white;
+  }
+}
+
+
+
+@media screen and (max-width: 1100px) {
+	.topnav a.lims_nav_item{
+	margin-right: 0;
+    margin-left: 0;
+	padding-left: 10px;
+
+	}
+	
+  }
+</style>
+</head>
+
+	<body>
+	<nav style="height:75px; top: 0; z-index: 20;">
+	<div class="logo" style="display:flex; padding-top: 0;">
+          <img class="nav-logo" src="images/project logo.jpg" style="height:100%;">
+				  <a class="lims_nav_name" href="code.html"><strong>𝘿𝙞𝙖𝙗𝙚𝙩𝙚𝙨 𝙋𝙧𝙚𝙙𝙞𝙘𝙩𝙤𝙧</strong></a>
+			</div>
+			
+	</nav>
+	<section style="height: 760px; margin-top: 16%; height: 40%;">
+	<div class="boxdiv" style=" height: 100%;">
+	
+	<div class="vr" style="	color: white;
+    border-radius: 19px;
+    width: 45%;
+    float: left;
+    padding: 50px;
+	height: fit-content;">
+	<h1 class="title">Welcome to Diabetes Predictor Project!</h1>
+				<h3><u>STEPS:</u></h3>
+					<ul class="steps" style="list-style:none;">
+					<li><p style="font-size:15px;"><b>STEP 1:</b>Kindly ensure that you have your medical report in an image format (either in JPEG or PNG).</p></li>
+					<li><p style="font-size:15px;"><b>STEP 2:</b>To proceed with the submission, Kindly click on the "Upload Medical Report" button below and select the appropriate image file.</p></li>
+					<li><p style="font-size:15px;"><b>STEP 3:</b>Once you have selected the image, please proceed by clicking on the "Predict" button.</p></li>
+					<li><p style="font-size:15px;"><b>STEP 4:</b>Your prediction result once generated will be opened automatically.</p></li>
+					</ul>
+	<p>Please note that the predictions provided by our system are for informational purposes only and should not replace professional medical advice.</p>
+	<p>We highly recommend consulting with a healthcare professional for a comprehensive evaluation and personalized guidance.</p>
+	</div>
+	</div>
+    <script>
+        function selectImage() {
+            document.getElementById('imageInput').click();
+        }
+function dropdown() {
+  var x = document.getElementById("myTopnav");
+  if (x.className === "topnav") {
+    x.className += " responsive";
+  } else {
+    x.className = "topnav";
+  }
+}
+
+
+</script>
+</body>
+</html>

@@ -1,0 +1,44 @@
+*{
+  padding:20px;
+  }
+  .container{
+  scroll-snap-type: y mandatory;
+  overflow-y:scroll;
+  height:100vh;
+  }
+  section{
+  height: 100vh;
+  display:flex;
+  justify-content: center;
+  scroll-snap-align:start;
+  }
+  .about1{
+  padding: 0px 0;
+  color:black;
+  font-family:"Source Sans Pro", Helvetica, Arial, sans-serif;
+  font-size:35px;
+  }
+  .about2{
+  padding: 70px 0;
+  color:black;
+  font-family:Source Sans Pro, Helvetica, Arial, sans-serif;
+  font-size:35px;
+  }
+  .one{
+    background-color:white; 
+  }
+  .two{
+    background-color: white;
+  }
+  .three{
+    background-color: white;
+  }
+  .four{
+    background-color: white;
+  }
+  .five{
+    background-color: white;
+  }
+  .six{
+    background-color: white;
+  }

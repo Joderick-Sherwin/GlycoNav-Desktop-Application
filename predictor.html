@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Diabetes Predictor</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="icon" type="image/x-icon" href="images/project-logo.ico">
+	<link rel="stylesheet" href="styles\About.css">
+    <script type="text/javascript" src="scripts/jquery.min.js"></script> 
+    <script type="text/javascript" src="scripts/slick.min.js"></script>
+    <script type="text/javascript" src="scripts/revollims.js"></script>
+	<style>
+.topnav .icon {
+  display: none;
+}
+
+.dropdown {
+  float: left;
+  overflow: hidden;
+}
+
+.dropdown .dropbtn {
+  font-size: 17px;    
+  border: none;
+  outline: none;
+  color: white;
+  padding: 14px 16px;
+  background-color: inherit;
+  font-family: inherit;
+  margin: 0;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  float: none;
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.topnav a:hover, .dropdown:hover .dropbtn {
+  color: white;
+}
+.dropdown:hover {
+  display: block;
+}
+
+
+.boxdiv.vr {
+	color: white;
+    border-radius: 19px;
+    background: blue;
+    width: 45%;
+    float: left;
+    padding: 50px;
+
+}
+@media screen and (max-width: 1000px) {
+	nav {
+	width: 100%;
+	}
+	.boxdiv{
+		display: flex;
+		flex-direction: column;
+		flex-wrap: wrap;
+		align-items: center;
+    }
+  .topnav a:not(:nth-child(0)), .dropdown .dropbtn {
+    display: none;
+  }
+  .topnav a.icon {
+    float: right;
+    display: block;
+	color: white;
+  }
+  
+  .topnav a.icon:hover {
+      background: rgba(255,255,255,0.2);
+	  }
+}
+
+@media screen and (max-width: 1000px) {
+	.lims_nav_mob { display:block; float:right; font-size:20px; line-height:20px; padding:5px; border-radius:5px; color:#fff; border:1px solid #fff; margin-top:10px; width:32px; height:32px; }
+	.lims_nav_mob_close { z-index:4; position:absolute; top:10px; right:10px; font-size:20px; padding:10px; background:var(--primary-color); color:#fff; line-height:12px; border-radius:5px; }	
+	.lims_nav_mob:hover { background:rgba(255,255,255,0.2); }
+  .topnav.responsive {position: relative; display: flex; flex-direction: column-reverse;}
+  .topnav.responsive .icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  .topnav.responsive a.lims_nav_item {
+        float: none;
+    display: block;
+    text-align: left;
+	background:blue;
+	color: white;
+  }
+}
+
+
+
+@media screen and (max-width: 1100px) {
+	.topnav a.lims_nav_item{
+	margin-right: 0;
+    margin-left: 0;
+	padding-left: 10px;
+
+	}
+	
+  }
+</style>
+</head>
+
+	<body>
+	<nav style="height:75px; top: 0; z-index: 20;">
+	<div class="logo" style="display:flex; padding-top: 0;">
+          <img class="nav-logo" src="images/project logo.jpg" style="height:100%;">
+				  <a class="lims_nav_name" href="code.html"><strong>𝘿𝙞𝙖𝙗𝙚𝙩𝙚𝙨 𝙋𝙧𝙚𝙙𝙞𝙘𝙩𝙤𝙧</strong></a>
+			</div>
+			<div class="topnav" id="myTopnav" style="position: relative;">
+  <a class="lims_nav_item" href="info.html"><strong>About Us</strong></a>
+  <a class="lims_nav_item lims_nav_active" href="code.html" class="active"><strong>Predictor</strong></a>
+  
+  <a href="javascript:void(0);" class="icon" onclick="dropdown()"><strong>&#8285;&#8285;&#8285;</strong></a>
+</div>
+	</nav>
+	<section style="height: 760px; margin-top: 16%; height: 40%;">
+	<div class="boxdiv" style=" height: 100%;">
+	
+	<div class="vr" style="	color: white;
+    border-radius: 19px;
+    width: 45%;
+    float: left;
+    padding: 50px;
+	height: fit-content;">
+	<h1 class="title">Welcome to Diabetes Predictor Project!</h1>
+				<h3><u>STEPS:</u></h3>
+					<ul class="steps" style="list-style:none;">
+					<li><p style="font-size:15px;"><b>STEP 1:</b>Kindly ensure that you have your medical report in an image format (either in JPEG or PNG).</p></li>
+					<li><p style="font-size:15px;"><b>STEP 2:</b>To proceed with the submission, Kindly click on the "Upload Medical Report" button below and select the appropriate image file.</p></li>
+					<li><p style="font-size:15px;"><b>STEP 3:</b>Once you have selected the image, please proceed by clicking on the "Predict" button.</p></li>
+					<li><p style="font-size:15px;"><b>STEP 4:</b>Your prediction result once generated will be opened automatically.</p></li>
+					</ul>
+					<form id="uploadForm" action="C:\Users\Admin\Desktop\Predictor\app.py" method="post" enctype="multipart/form-data" style="text-align: center;">
+					<div class="buttons" style="width: 100%; margin: auto; text-align: center;"><form id="uploadForm" action="C:\Users\Admin\Desktop\Predictor\app.py" method="post" enctype="multipart/form-data" style="text-align: center;">
+          <div class="button1"><input type="file" name="image" id="imageInput" style="display: none;"><button class="button1" style="color:black" type="button" onclick="selectImage()">Upload Medical Report >></button></div>
+				<p  class="note" style="font-size: 15px;">Please note that the predictions provided by our system are for informational 
+          purposes only and should not replace professional medical advice.We highly recommend consulting
+           with a healthcare professional for a comprehensive evaluation and personalized guidance.</p>
+		    <div class="button2"><button class="button2" type="submit" style="color: black;" onclick="runApp()">Predict >> </button></div></form>
+	</div>
+	</div>
+	</section>
+	<section class="variables"style="background: white; text-align: center; height: 40%;">
+	<div class="Advantage" style="text-align: center; float: left; background: white; width: 100%;">
+	<h1>Relation Between Variables and Diabetes</h1>
+	<img class="advimg" src="images\bmi.png" style="float: left; height: auto;">
+	<img class="advimg" src="images\bp.png" style="float: left;height: auto;">
+	<img class="advimg" src="images\dpf.png" style="float: left; height: auto;"></div>
+	<div class="Advantage" style="text-align: center; float: left; background: white; width: 100%;">
+	<img class="advimg" src="images\st.png" style="float: left; height: auto;">
+	<img class="advimg" src="images\gl.png" style="float: left; height: auto; padding-top: 27px;">
+	<img class="advimg" src="images\il.png" style="float: left; height: auto;">
+	</div>
+	</section>
+    <script>
+        function selectImage() {
+            document.getElementById('imageInput').click();
+        }
+function dropdown() {
+  var x = document.getElementById("myTopnav");
+  if (x.className === "topnav") {
+    x.className += " responsive";
+  } else {
+    x.className = "topnav";
+  }
+}
+</script>
+</body>
+</html>
