@@ -1,0 +1,12 @@
+PyQt5
+opencv-python
+pytesseract
+pandas
+numpy
+matplotlib
+seaborn
+scikit-learn
+reportlab
+beautifulsoup4
+PyPDF2
+lxml
